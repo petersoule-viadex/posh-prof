@@ -77,7 +77,7 @@ function resolve-sid($stringsid) {
 }
 
 $pubaddr = (Resolve-DnsName -Server resolver1.opendns.com -name myip.opendns.com).ipaddress
-$privatecert = (dir Cert:\CurrentUser\TrustedPublisher\D8684644F851217AB26261D0A01BD8CD19F05FED)
+$privatecert = (Get-ChildItem Cert:\CurrentUser\TrustedPublisher\D8684644F851217AB26261D0A01BD8CD19F05FED)
 $amiadmin = [bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -like "S-1-5-32-544")
 $localipaddress = @(Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true").IPAddress
 
@@ -177,8 +177,7 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 $handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
-$handlers | ft key,function,Description
-
+$handlers | Format-Table key,function,Description
 
 #Spin-wheeloflunch
 Function Invoke-WheelOfLunch {
