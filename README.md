@@ -1,5 +1,8 @@
 # Pete's first Posh repo
-## This project is my first PowerShell repo clone.
+#### This project is my first PowerShell repo clone.
+
+### My github stats:
+[![GitHub Streak](https://streak-stats.demolab.com/?user=bigpete-za)](https://git.io/streak-stats)
 
 # PowerShell Profiles
 
