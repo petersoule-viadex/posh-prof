@@ -56,6 +56,7 @@ Once the scripts are in place, they will be loaded automatically when you start 
 
 | Commit ID | Author | Date | Message |
 |-----------|--------|------|---------|
+|31d63a6 |[Peter Soule](mailto:Peter.Soule@viadex.com) |2024-03-03 13:37:04 +0200 | Updated handlers and alias prompt
 |b2ffc57 |[Peter Soule](mailto:Peter.Soule@viadex.com) |2024-03-03 12:17:08 +0200 | Added Commit History
 | 98d25fb   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 12:03:42 +0200 | Updated |
 | 989d163   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:58:28 +0200 | Updated |

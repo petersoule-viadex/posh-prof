@@ -33,7 +33,7 @@ function resolve-sid($stringsid) {
 $pubaddr = (Resolve-DnsName -Server resolver1.opendns.com -name myip.opendns.com).ipaddress
 
 # Get private certificate
-$privatecert = (dir Cert:\CurrentUser\TrustedPublisher\D8684644F851217AB26261D0A01BD8CD19F05FED)
+$privatecerts = (Get-ChildItem Cert:\CurrentUser\TrustedPublisher\)
 
 # Check if current user is an admin
 $amiadmin = [bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -like "S-1-5-32-544")
