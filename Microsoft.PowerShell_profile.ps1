@@ -85,8 +85,8 @@ Function Invoke-WheelOfLunch {
     $Authentic = @(
                     "Blue Marlin Asian Cuisine and Sushi Bar",
                     "1890 House Sushi and Grill",
-					"Simply Asia",
-					"Wok in a Box",
+                    "Simply Asia",
+                    "Wok in a Box",
                     "Hibachi Buffet"
                     )
     $Indian = @(
