@@ -61,7 +61,7 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 #Spin-wheeloflunch
-Function petes-WheelOfLunch {
+Function Invoke-WheelOfLunch {
     $FastFood = @(
                     "Burger King",
                     "McDonald's",
@@ -122,7 +122,7 @@ Function petes-WheelOfLunch {
                     "Checkers",
                     "Jerry's Burger Bar",
                     "Anvil Burger Co",
-                    "StickyBBQ"
+                    "StickyBBQ",
                     "Redemption Real Burgers",
                     "Red Robin",
 					"Steers",
@@ -163,7 +163,6 @@ Function petes-WheelOfLunch {
                 $Vietnamese,
                 $BBQ,
                 $Buffet,
-                $Greek,
                 $Italian,
                 $Indian
                 )
@@ -177,7 +176,6 @@ Function petes-WheelOfLunch {
                 "Vietnamese",
                 "BBQ",
                 "Buffet",
-                "Greek",
                 "Italian",
                 "Indian"
                 )
