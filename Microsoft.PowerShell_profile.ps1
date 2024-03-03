@@ -176,44 +176,9 @@ Register-ArgumentCompleter -CommandName Stop-Service -ParameterName Name -Script
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
-<#
-.SYNOPSIS
-A function in PowerShell to list the registered argument completers and PSReadLine handlers.
+$handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
+$handlers | ft key,function,Description
 
-.DESCRIPTION
-This function creates two tables: one for argument completers and one for PSReadLine handlers. It then combines these tables and formats them as a table.
-The Type column indicates whether the row is an argument completer or a PSReadLine handler, and the Name column gives the name of the command or key handler.
-
-.EXAMPLE
-An example
-
-.NOTES
-Made with GitHub Copilot
-#>
-function Get-RegisteredHandlers {
-    $completers = [System.Management.Automation.CommandCompletion]::GetCommands()
-    $handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
-
-    $completersTable = $completers | ForEach-Object {
-        [PSCustomObject]@{
-            Type = 'Argument Completer'
-            Name = $_.Command
-        }
-    }
-
-    $handlersTable = $handlers | ForEach-Object {
-        [PSCustomObject]@{
-            Type = 'PSReadLine Handler'
-            Name = $_.Key
-        }
-    }
-    return @{
-        Completers = $completersTable
-        Handlers = $handlersTable
-    }
-    $handlerstable = ($handlers | ft key,function,Description)
-    ##$completersTable + $handlersTable | Format-Table -AutoSize
-}
 
 #Spin-wheeloflunch
 Function Invoke-WheelOfLunch {
@@ -561,6 +526,8 @@ Function Get-MOTD {
 Clear-Host
 get-motd
 get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},helpuri
+get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},helpuri
+
 #set the enumerationlimit to extend long strings.
 $formatenumerationlimit = -1
 prompt
