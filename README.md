@@ -38,14 +38,15 @@ To use these profile scripts, place them in your PowerShell profile directory. T
 
 Once the scripts are in place, they will be loaded automatically when you start a new PowerShell session.
 
-# Commit History
-
-- 8a6af43 by Peter Soule, 2 minutes ago : Added code omitted by Copilot
 
 
-- 9824e13 by Peter Soule, 9 minutes ago : Refactor code to improve performance and readability
-- b997ea3 by Peter Soule, 21 minutes ago : updated formatting
-- b108054 by Peter Soule, 23 minutes ago : updated wheel of lunch
-- 797505d by Peter Soule, 28 minutes ago : updated readme
-- d1d35c3 by Peter Soule, 43 minutes ago : Added ReadME
-- 8648977 by Peter Soule, 47 minutes ago : Initial init on Main
+| Commit Hash | Author                                                                 | Date         | Message                                      |
+|-------------|----------------------------------------------------------------------|--------------|----------------------------------------------|
+| 8a6af43     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 2 minutes ago| Added code omitted by Copilot                 |
+| 9824e13     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 9 minutes ago| Refactor code to improve performance and readability |
+| b997ea3     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 21 minutes ago| updated formatting                           |
+| b108054     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 23 minutes ago| updated wheel of lunch                        |
+| 797505d     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 28 minutes ago| updated readme                               |
+| d1d35c3     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 43 minutes ago| Added ReadME                                 |
+| 8648977     | [Peter Soule](mailto:Peter.Soule@viadex.com)   | 47 minutes ago| Initial init on Main                          |
+
