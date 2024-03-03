@@ -38,18 +38,24 @@ To use these profile scripts, place them in your PowerShell profile directory. T
 
 Once the scripts are in place, they will be loaded automatically when you start a new PowerShell session.
 
+
 | Commit ID | Author | Date | Message |
 |-----------|--------|------|---------|
-|989d163 | Peter Soule | 4 minutes ago | Updated |
-| 37d933b | Peter Soule |7 minutes ago | Updated |
-| 7d09225   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2 minutes ago | Updated registered autocompleters |
-| 8d73712   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 14 minutes ago | Updated registered autocompleters |
-| 2e2e541   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 20 minutes ago | Added function to autocomplete services |
-| a0c4abe   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 41 minutes ago | Added code omitted by Copilot |
-| fc2b2f1   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 43 minutes ago | Updated Release history |
-| a354bc7   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 47 minutes ago | Removed Commit_history.md |
-| 5511799   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 48 minutes ago | Merged Commit_history.md with Readme.md |
-| f1cc457   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 52 minutes ago | Added commit_history.md |
-| 8a6af43   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 55 minutes ago | Added code omitted by Copilot |
-| 9824e13   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 62 minutes ago | Refactor code to improve performance and readability |
-| b997ea3   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 74 minutes ago | Updated formatting |
+| 98d25fb   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 12:03:42 +0200 | Updated |
+| 989d163   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:58:28 +0200 | Updated |
+| 37d933b   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:55:03 +0200 | Updated |
+| 7d09225   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:48:38 +0200 | Updated registered autocompleters |
+| 8d73712   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:37:21 +0200 | Updated registered autocompleters |
+| 2e2e541   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:31:30 +0200 | Added function to autocomplete services |
+| a0c4abe   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:10:14 +0200 | Added code omitted by Copilot |
+| fc2b2f1   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:07:56 +0200 | updated Release history |
+| a354bc7   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:03:50 +0200 | Removed Commit_history.md |
+| 5511799   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:03:07 +0200 | Merged Commit_history.md with Readme.md |
+| f1cc457   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:58:44 +0200 | Added commit_history.md |
+| 8a6af43   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:55:48 +0200 | Added code omitted by Copilot |
+| 9824e13   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:49:11 +0200 | Refactor code to improve performance and readability |
+| b997ea3   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:36:49 +0200 | updated formatting |
+| b108054   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:35:22 +0200 | updated wheel of lunch |
+| 797505d   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:29:54 +0200 | updated readme |
+| d1d35c3   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:14:42 +0200 | Added ReadME |
+| 8648977   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 10:10:37 +0200 | Initial init on Main |
