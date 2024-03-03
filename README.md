@@ -1,9 +1,6 @@
 # Pete's first Posh repo
 #### This project is my first PowerShell repo clone.
 
-### My github stats:
-[![GitHub Streak](https://streak-stats.demolab.com/?user=bigpete-za)](https://git.io/streak-stats)
-
 # PowerShell Profiles
 
 This repository contains two PowerShell profile scripts:
@@ -39,12 +36,27 @@ Key features include:
 
 To use these profile scripts, place them in your PowerShell profile directory. The exact location will depend on your system configuration. You can find the location of your profile directory by running `$PROFILE` in a PowerShell session.
 
+
 Once the scripts are in place, they will be loaded automatically when you start a new PowerShell session.
 
-# Commit History
+-----
+
+# My github stats:
+[![GitHub Streak](https://streak-stats.demolab.com/?user=bigpete-za)](https://git.io/streak-stats)
+
+---
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=petersoule-viadex&repo=posh-prof&theme=chartreuse-dark)](https://github.com/petersoule-viadex)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=bigpete-za&repo=posh-prof&theme=chartreuse-dark)](https://github.com/bigpete-za/posh-prof)
+[![Pete's github stats](https://github-readme-stats.vercel.app/api?username=petersoule-viadex&show_icons=true&count_private=true&theme=chartreuse-dark)](https://github.com/petersoule-viadex)
+
+---
+
+## Commit History
 
 | Commit ID | Author | Date | Message |
 |-----------|--------|------|---------|
+|b2ffc57 |[Peter Soule](mailto:Peter.Soule@viadex.com) |2024-03-03 12:17:08 +0200 | Added Commit History
 | 98d25fb   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 12:03:42 +0200 | Updated |
 | 989d163   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:58:28 +0200 | Updated |
 | 37d933b   | [Peter Soule](mailto:Peter.Soule@viadex.com) | 2024-03-03 11:55:03 +0200 | Updated |
