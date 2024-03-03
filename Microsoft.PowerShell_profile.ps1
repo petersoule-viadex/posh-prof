@@ -82,17 +82,32 @@ $amiadmin = [bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).g
 $localipaddress = @(Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true").IPAddress
 
 
+# Register an argument completer for the 'winget' command
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
-    param($wordToComplete, $commandAst, $cursorPosition)
-        [Console]::InputEncoding = [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
-        $Local:word = $wordToComplete.Replace('"', '""')
-        $Local:ast = $commandAst.ToString().Replace('"', '""')
-        winget complete --word="$Local:word" --commandline "$Local:ast" --position $cursorPosition | ForEach-Object {
-            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
-        }
+    param(
+        # The word being completed
+        $wordToComplete, 
+        # The command abstract syntax tree (AST)
+        $commandAst, 
+        # The cursor position relative to the start of the word being completed
+        $cursorPosition
+    )
+
+    # Set the input and output encoding to UTF-8
+    [Console]::InputEncoding = [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
+
+    # Replace any double quotes in the word and command AST with two double quotes
+    $Local:word = $wordToComplete.Replace('"', '""')
+    $Local:ast = $commandAst.ToString().Replace('"', '""')
+
+    # Execute the 'winget complete' command with the word, command line, and position parameters
+    # For each output line, create a new CompletionResult object
+    winget complete --word="$Local:word" --commandline "$Local:ast" --position $cursorPosition | ForEach-Object {
+        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+    }
 }
-# Register an argument completer for the 'az' command
-Register-ArgumentCompleter -Native -CommandName az -ScriptBlock {
+# Define the script block for argument completion of the 'az' command
+$azArgumentCompleter = {
     param(
         # The name of the command for which argument completion is being registered
         $commandName, 
@@ -126,6 +141,37 @@ Register-ArgumentCompleter -Native -CommandName az -ScriptBlock {
     # Remove the temporary file and the environment variables
     Remove-Item $completion_file, Env:\_ARGCOMPLETE_STDOUT_FILENAME, Env:\ARGCOMPLETE_USE_TEMPFILES, Env:\COMP_LINE, Env:\COMP_POINT, Env:\_ARGCOMPLETE, Env:\_ARGCOMPLETE_SUPPRESS_SPACE, Env:\_ARGCOMPLETE_IFS, Env:\_ARGCOMPLETE_SHELL
 }
+# Register an argument completer for the 'az' command using the script block
+Register-ArgumentCompleter -Native -CommandName az -ScriptBlock $azArgumentCompleter
+# Define a script block
+$stopServiceArgumentCompleter = {
+    param(
+        # The name of the command for which argument completion is being registered
+        $commandName, 
+        # The name of the parameter for which argument completion is being registered
+        $parameterName, 
+        # The word being completed
+        $wordToComplete, 
+        # The command abstract syntax tree (AST)
+        $commandAst, 
+        # A hashtable that contains the parameter values of the command
+        $fakeBoundParameters
+    )
+
+    # Get all running services whose names start with the word being completed
+    $services = Get-Service | Where-Object {$_.Status -eq "Running" -and $_.Name -like "$wordToComplete*"}
+
+    # For each service, create a new CompletionResult object
+    $services | ForEach-Object {
+        New-Object -Type System.Management.Automation.CompletionResult -ArgumentList $_.Name,
+            $_.Name,
+            "ParameterValue",
+            $_.Name
+    }
+}
+# Register an argument completer for the 'Stop-Service' command and the 'Name' parameter
+Register-ArgumentCompleter -CommandName Stop-Service -ParameterName Name -ScriptBlock $stopServiceArgumentCompleter
+
 ## show all menu items
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
@@ -161,8 +207,12 @@ function Get-RegisteredHandlers {
             Name = $_.Key
         }
     }
-
-    $completersTable + $handlersTable | Format-Table -AutoSize
+    return @{
+        Completers = $completersTable
+        Handlers = $handlersTable
+    }
+    $handlerstable = ($handlers | ft key,function,Description)
+    ##$completersTable + $handlersTable | Format-Table -AutoSize
 }
 
 #Spin-wheeloflunch
