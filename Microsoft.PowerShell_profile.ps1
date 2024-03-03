@@ -177,7 +177,6 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 $handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
-$handlers | Format-Table key,function,Description
 
 #Spin-wheeloflunch
 Function Invoke-WheelOfLunch {
@@ -525,7 +524,8 @@ Function Get-MOTD {
 Clear-Host
 get-motd
 get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},helpuri
-get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},helpuri
+$handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
+$handlers |  get-random -count 10 | Format-Table key,function,Description
 
 #set the enumerationlimit to extend long strings.
 $formatenumerationlimit = -1
