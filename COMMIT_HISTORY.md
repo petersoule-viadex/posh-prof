@@ -1,7 +1,0 @@
-- 8a6af43 by Peter Soule, 2 minutes ago : Added code omitted by Copilot
-- 9824e13 by Peter Soule, 9 minutes ago : Refactor code to improve performance and readability
-- b997ea3 by Peter Soule, 21 minutes ago : updated formatting
-- b108054 by Peter Soule, 23 minutes ago : updated wheel of lunch
-- 797505d by Peter Soule, 28 minutes ago : updated readme
-- d1d35c3 by Peter Soule, 43 minutes ago : Added ReadME
-- 8648977 by Peter Soule, 47 minutes ago : Initial init on Main
