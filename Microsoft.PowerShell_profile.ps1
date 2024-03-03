@@ -76,11 +76,6 @@ function resolve-sid($stringsid) {
 	$objUser.Value
 }
 
-$pubaddr = (Resolve-DnsName -Server resolver1.opendns.com -name myip.opendns.com).ipaddress
-$privatecert = (Get-ChildItem Cert:\CurrentUser\TrustedPublisher\D8684644F851217AB26261D0A01BD8CD19F05FED)
-$amiadmin = [bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -like "S-1-5-32-544")
-$localipaddress = @(Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true").IPAddress
-
 
 # Register an argument completer for the 'winget' command
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
@@ -523,7 +518,7 @@ Function Get-MOTD {
 
 Clear-Host
 get-motd
-get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},OutputType,helpuri
+get-alias | get-random -count 10 | Format-Table @{label='aliases'; expression={$_.displayname}},OutputType,helpuri
 $handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
 $handlers |  get-random -count 10 | Format-Table key,function,Description
 
