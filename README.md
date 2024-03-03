@@ -38,6 +38,7 @@ To use these profile scripts, place them in your PowerShell profile directory. T
 
 Once the scripts are in place, they will be loaded automatically when you start a new PowerShell session.
 
+# Commit History
 
 | Commit ID | Author | Date | Message |
 |-----------|--------|------|---------|
