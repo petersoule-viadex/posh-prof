@@ -46,8 +46,8 @@ Once the scripts are in place, they will be loaded automatically when you start 
 
 ---
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=petersoule-viadex&repo=posh-prof&theme=chartreuse-dark)](https://github.com/petersoule-viadex)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=bigpete-za&repo=posh-prof&theme=chartreuse-dark)](https://github.com/bigpete-za/posh-prof)
+[![Professional Profile](https://github-readme-stats.vercel.app/api/pin/?username=petersoule-viadex&repo=posh-prof&theme=chartreuse-dark)](https://github.com/petersoule-viadex/posh-prof)
+[![Personal Profile](https://github-readme-stats.vercel.app/api/pin/?username=bigpete-za&repo=posh-prof&theme=chartreuse-dark)](https://github.com/bigpete-za/posh-prof)
 [![Pete's github stats](https://github-readme-stats.vercel.app/api?username=petersoule-viadex&show_icons=true&count_private=true&theme=chartreuse-dark)](https://github.com/petersoule-viadex)
 
 ---
