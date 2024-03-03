@@ -523,7 +523,7 @@ Function Get-MOTD {
 
 Clear-Host
 get-motd
-get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},helpuri
+get-alias | get-random -count 10 | ft @{label='aliases'; expression={$_.displayname}},OutputType,helpuri
 $handlers = [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers()
 $handlers |  get-random -count 10 | Format-Table key,function,Description
 
