@@ -36,7 +36,6 @@ Key features include:
 
 To use these profile scripts, place them in your PowerShell profile directory. The exact location will depend on your system configuration. You can find the location of your profile directory by running `$PROFILE` in a PowerShell session.
 
-
 Once the scripts are in place, they will be loaded automatically when you start a new PowerShell session.
 
 -----
